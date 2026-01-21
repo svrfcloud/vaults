@@ -1,7 +1,11 @@
-# Sample Hardhat 3 Beta Project (minimal)
+# vaults
+Solidity contract + Node.js indexer + GraphQL API for querying timestamped EVM events.
 
-This project has a minimal setup of Hardhat 3 Beta, without any plugins.
-
-## What's included?
-
-The project includes native support for TypeScript, Hardhat scripts, tasks, and support for Solidity compilation and tests.
+A minimal, deterministic indexing pipeline that listens to EVM events, stores them in SQLite, and exposes them through a GraphQL API.
+Designed for clarity, extensibility, and off‑chain analytics workflows.
+This project demonstrates a clean architecture for:
+• 	event‑driven indexing
+• 	GraphQL‑based querying
+• 	timestamped event storage
+• 	deterministic contract behavior
+• 	local analytics and prototyping
