@@ -1,6 +1,6 @@
-import Database from 'better-sqlite3'
+import Database from 'better-sqlite3';
 
-const db = new Database('queries.db')
+const db = new Database('queries.db');
 
 // Create table if not exists
 db.prepare(`
@@ -8,16 +8,16 @@ db.prepare(`
     idx INTEGER,
     timestamp INTEGER
   )
-`).run()
+`).run();
 
 export function insertQuery(idx, timestamp) {
     db.prepare(
         "INSERT INTO queries (idx, timestamp) VALUES (?, ?)"
     ).run(idx, timestamp)
-}
+};
 
 export function getQueries(limit = 50) {
     return db.prepare(
         "SELECT idx, timestamp FROM queries ORDER BY idx DESC LIMIT ?"
     ).all(limit)
-}
+};
