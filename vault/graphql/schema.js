@@ -7,4 +7,8 @@ export const typeDefs = `#graphql
   type Query {
     queries(limit: Int): [QueryEvent]
   }
+
+  type Mutation {
+    createQuery: Boolean
+  }
 `

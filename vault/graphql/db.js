@@ -10,6 +10,11 @@ db.prepare(`
   )
 `).run();
 
+// Reset the database (for testing purposes)
+export function resetDB() {
+    db.prepare("DELETE FROM queries").run()
+};
+
 export function insertQuery(idx, timestamp) {
     db.prepare(
         "INSERT INTO queries (idx, timestamp) VALUES (?, ?)"
